@@ -41,7 +41,7 @@ class ProductList extends React.Component {
             "contractId": this.getContractId() || null,
             "transactionId": null,
             "skipCache": false,
-            "env": "shop-test2",
+            "env": "shop-test1",
             "country": this.state.selectedCountry,
             "currency": currency[this.state.selectedCountry]
         }
