@@ -2,6 +2,7 @@ import React from 'react';
 import User from './User';
 import ProductList from './ProductList';
 import CreditCardActions from './creditCard/creditCardActions';
+import EchoMessage from './messageEcho/messageEcho';
 import occ from '../api/occ';
 import { Tabs, Tab, TabPanel, TabList } from 'react-web-tabs';
 
@@ -26,6 +27,7 @@ class App extends React.Component {
               <Tab className="item" tabFor="aboutMe">ABOUT ME</Tab>
               <Tab className="item" tabFor="productList">PRODUCT LIST</Tab>
               <Tab className="item" tabFor="myCreditCards">MY CREDIT CARDS</Tab>
+              <Tab className="item" tabFor="messageEcho">Echo Message</Tab>
             </TabList>
             <br/><br/><br/>
             <TabPanel tabId="aboutMe">
@@ -36,6 +38,9 @@ class App extends React.Component {
             </TabPanel>
             <TabPanel tabId="myCreditCards">
               <CreditCardActions/>
+            </TabPanel>
+            <TabPanel tabId="messageEcho">
+              <EchoMessage/>
             </TabPanel>
           </Tabs>
         </div>
