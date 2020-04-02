@@ -3,7 +3,7 @@ import occTest2 from "../../api/occTest2";
 
 class EchoMessage extends React.Component {
   state = {
-    responseMessage: ''
+    responseMessage: 'Something went wrong!!!'
   };
 
   async componentDidMount() {
@@ -21,7 +21,7 @@ class EchoMessage extends React.Component {
       request
     );
     if (response.status === 200) {
-      this.setState({ responseMessage: response });
+      this.setState({ responseMessage: JSON.stringify(response) });
     }
   }
 
